@@ -1,0 +1,20 @@
+{
+  "name": "html5-css3-training",
+  "version": "1.0.0",
+  "description": "HTML5 and CSS3 Training Examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=1234 www"
+  },
+  "keywords": [],
+  "author": "Vinod <vinod@vinod.co",
+  "repository": {
+    "type": "website",
+    "url": "https://vinod.co"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "mongodb": "^2.2.33"
+  }
+}

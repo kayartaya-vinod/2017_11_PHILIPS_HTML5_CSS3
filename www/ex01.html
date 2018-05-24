@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Hello Html5</title>
+</head>
+<body>
+	<h1>Hello, World!</h1>
+	<hr>
+	<video onmouseover="startVideo(this)" 
+		onmouseout = "pauseVideo(this)"
+		id="billy" src="./assets/multimedia/billy.mp4" 
+		poster="./assets/images/billy.jpg"
+		muted controls>
+		<h3 style="color: red">No video support!</h3>
+	</video>
+
+	<script type="text/javascript">
+		function startVideo(v1){
+			v1.play();
+		}
+		function pauseVideo(v1){
+			v1.pause();
+		}
+	</script>
+</body>
+</html>

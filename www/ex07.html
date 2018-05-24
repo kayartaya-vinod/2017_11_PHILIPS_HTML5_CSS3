@@ -1,0 +1,59 @@
+<html>
+<head>
+    <style type="text/css">
+        #img1 {
+            width: 300px;
+            height: 300px;
+            /* all browsers that use webkit rendering engine (chrome/safari/opera) */
+            -webkit-mask-image: url(/assets/images/rip.png);
+            -webkit-mask-size: 300px 300px;
+
+            /* firefox */
+            -moz-mask-image: url(/assets/images/rip.png);
+            -moz-mask-size: 300px 300px;
+
+            /* Microsoft edge */
+            -ms-mask-image: url(/assets/images/rip.png);
+            -ms-mask-size: 300px 300px;
+        }
+
+        #img2 {
+            width: 300px;
+            height: 300px;
+            /* all browsers that use webkit rendering engine (chrome/safari/opera) */
+            -webkit-mask-image: url(/assets/images/star.svg);
+            -webkit-mask-size: 300px 300px;
+        }
+
+        #img3 {
+            width: 193px;
+            height: 314px;
+            -webkit-mask-image: url(/assets/images/cat.png);
+            
+        }
+
+        .headline {
+            font-size: 70pt;
+            font-family: Impact;
+            -webkit-text-stroke-color: blue;
+            -webkit-text-fill-color: lightblue;
+            -webkit-text-stroke-width: 2px;
+            text-shadow: 5px 5px 5px blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headline">CSS3 Examples</h1>
+    
+    <div>
+        <img id="img1" src="/assets/images/tampa.jpg" 
+            title="The city of Tampa in the night"
+            alt="The city of Tampa in the night">
+
+        <img src="/assets/images/tampa.jpg" id="img2">
+        <img src="/assets/images/fireworks.jpg" id="img3">
+    </div>
+
+    <h2 class="headline">This is the end of this demo</h2>
+</body>
+</html>

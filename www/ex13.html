@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="d1"></div>
+    <script src="utils.js"></script>
+    <script>
+        if ("Worker" in window) {
+            setTimeout(function(){
+                console.log("Hello from setTimeout!");
+            }, 1000);
+
+            sleep(50000);
+
+            var d1 = document.getElementById("d1");
+
+            var w1 = new Worker("./ex13a.js");
+            var w2 = new Worker("./ex13b.js");
+            
+            w1.postMessage("Hello");
+            
+            w1.onmessage = function (evt) {
+                d1.innerHTML += (">>>>" + evt.data + "<br />");
+            };
+            w2.onmessage = function (evt) {
+                d1.innerHTML += ("++++" + evt.data + "<br />");
+            };
+
+            
+        }    
+    </script>
+</body>
+
+</html>

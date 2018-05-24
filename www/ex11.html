@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <style>
+        @keyframes pulseAnim {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-25px);
+            }
+            75% {
+                transform: translateY(25px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        #img1 {
+            width: 300px;
+        }
+
+        #img1:hover {
+            animation: pulseAnim 100ms 5;
+        }
+
+        @keyframes pauseRotateEffect {
+            40% {
+                transform: rotateY(360deg);
+            }
+            50% {
+                transform: rotateY(-360deg);
+            }
+        }
+
+        .pause-rotate {
+            animation: pauseRotateEffect 8s infinite;
+            /* display: inline-block; */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="pause-rotate">CSS3 Animation</h1>
+
+    <div>
+        <img src="/assets/images/cake.jpg" id="img1">
+    </div>
+</body>
+
+</html>

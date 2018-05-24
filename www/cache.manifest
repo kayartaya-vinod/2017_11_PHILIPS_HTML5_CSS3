@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+# This is the cache manifest file for
+# ex03.html application
+# Version: 1.0
+
+CACHE:
+/ex03.css
+/ex03.js
+
+NETWORK:
+*

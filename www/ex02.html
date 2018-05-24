@@ -1,0 +1,36 @@
+<!-- html>(head+body>h1{HTML GeoLocation}) -->
+<html>
+<head></head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqzZW3xmX6nlPrJgANxLo6qOZ3lKX9TGc"></script>
+   
+<body>
+    <h1>HTML GeoLocation</h1>
+    <hr>
+    <div id="the_map" style="width: 500px; height: 500px;"></div>
+
+    <script>
+        if(!("geolocation" in window.navigator)){
+            document.write("<h3>No GeoLocation Support!</h3>");
+        }
+        else {
+            var gl = window.navigator.geolocation;
+            gl.getCurrentPosition(handleLocation);
+            
+            function handleLocation(gps){
+                var lat = gps.coords.latitude,
+                    lon = gps.coords.longitude;
+                
+                var mapOptions = {
+					zoom: 17,
+                    center: {lat: lat, lng: lon}
+				};
+				map = new google.maps.Map(document.getElementById('the_map'), mapOptions);
+				var marker = new google.maps.Marker({
+					position: {lat: lat, lng: lon},
+					map: map
+				});		
+            }
+        }
+    </script>
+</body>
+</html>
